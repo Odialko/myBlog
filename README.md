@@ -30,3 +30,4 @@ rake db:migrate
 rails s
 ```
 
+#Enjoy :-)
