@@ -29,5 +29,8 @@ rake db:migrate
 ```
 rails s
 ```
-
+## Heroku link:
+```
+https://odialkoblog.herokuapp.com
+```
 # Enjoy :-)
