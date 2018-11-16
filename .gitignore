@@ -17,7 +17,7 @@ capybara-*.html
 .rspec
 /log
 /tmp
-.idea
+/.idea
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /public/system
