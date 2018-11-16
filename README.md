@@ -31,6 +31,6 @@ rails s
 ```
 ## Heroku link:
 ```
-https://odialkoblog.herokuapp.com
+[I'm an blog link](https://odialkoblog.herokuapp.com)
 ```
 # Enjoy :-)
