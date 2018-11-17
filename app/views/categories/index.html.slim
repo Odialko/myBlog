@@ -1,0 +1,20 @@
+.container
+  .panel
+    .panel-heading
+      .panel-title
+        = icon('grav')
+        = 'Категорії'
+        = link_to new_category_path, class: 'btn btn-info add-btn-style' do
+          span.fa.fa-plus
+            | Додати
+
+  .panel-body.pn
+    table.table.table-striped.table-hover.dataTable.no-footer
+      thead
+        tr
+          th ID
+          th.text-left Дата публікації
+          th.text-center Назва категорії
+          th.text-right Дії
+      tbody.result-table
+        = render 'table'

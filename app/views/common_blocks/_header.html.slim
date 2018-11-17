@@ -1,0 +1,13 @@
+nav#nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  .container
+    = link_to 'Odialko', root_path, class: 'navbar-brand mr-5'
+    button.navbar-toggler aria-controls="navbarNav" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarNav" data-toggle="collapse" type="button"
+      span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item.mr-3
+          = link_to 'Головна', root_path, class: 'nav-link'
+        li.nav-item.mr-3
+          = link_to 'Категорії', categories_path, class: 'nav-link'
+        li.nav-item.mr-3
+          = link_to 'Пости', root_path, class: 'nav-link'

@@ -1,19 +1,23 @@
 doctype html
 html lang="uk"
   head
-    meta charset="UTF-8" /
-    meta content="width=device-width, initial-scale=1" name="viewport" /
+    meta charset="UTF-8"
+    meta content="width=device-width, initial-scale=1" name="viewport"
     title myBlog
     = csrf_meta_tags
 
     = stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'
-    = stylesheet_link_tag 'styles'
+    = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
+    = stylesheet_link_tag 'application'
 
     = javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'
     = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'
     = javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'
+    = stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'
     = javascript_include_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'
-    = javascript_include_tag 'scripts'
+    = javascript_include_tag 'application'
 
   body
-    = yield
+    = render 'common_blocks/header'
+    .main-bg
+      = yield
