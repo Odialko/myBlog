@@ -1,0 +1,15 @@
+.container
+  .panel-body
+    .tab-block.mb25
+      = simple_form_for [@post], html: { multipart: true } do |f|
+        = f.error_notification
+        ul.nav.tabs-right.tabs-border
+          li.active
+            a data-toggle='tab' href='#main_uk' Основні поля
+
+          = link_to 'Повернутися', posts_path, class: 'btn btn-primary btn-tmp'
+          = f.button :submit, class: 'btn-tmp btn-success', name: 'submit', value: 'Зберегти', data: { disable_with: false }
+          /= f.button :submit, name: 'continue', value: 'Продовжити', class: 'btn-system btn-tmp', data: { disable_with: false }
+
+        .tab-content
+          = render "#{controller_path}/main_uk", f: f
