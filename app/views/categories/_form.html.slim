@@ -4,15 +4,6 @@
       = simple_form_for [@category], html: { multipart: true } do |f|
         = f.error_notification
         hr
-        /ul.nav.nav-tabs
-          li.active
-            = link_to '#main_uk' do
-              | Основні поля
-            /a data-toggle='tab' href='#main_uk' Основні поля
-          = link_to 'Повернутися', categories_path, class: 'btn btn-primary btn-tmp'
-          = f.button :submit, class: 'btn-tmp btn-success', name: 'submit', value: 'Зберегти', data: { disable_with: false }
-          /= f.button :submit, name: 'continue', value: 'Продовжити', class: 'btn-system btn-tmp', data: { disable_with: false }
-
         .tab-content
           = render "#{controller_path}/main_uk", f: f
         .text-right
