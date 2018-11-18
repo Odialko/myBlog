@@ -43,6 +43,9 @@ module ApplicationHelper
       concat render(files)
     end unless files.blank?
   end
+  def friendly_title(str, lenght = 40)
+    strip_tags(str).truncate(lenght) if str.present?
+  end
   private
   def image?(ext)
     %w(jpeg jpg png gif).include?(ext)

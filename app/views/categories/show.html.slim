@@ -10,4 +10,4 @@
       - @category.posts.each do |post|
         span.post-name
           = link_to post do
-            = post.name
+            = friendly_title(post.name) + '; '
