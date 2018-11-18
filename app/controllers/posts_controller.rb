@@ -5,6 +5,8 @@ class PostsController < ApplicationController
     @posts = Post.order(created_at: :desc)
   end
 
+  def show
+  end
   def show; end
 
   def new

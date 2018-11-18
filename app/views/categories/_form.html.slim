@@ -3,24 +3,9 @@
     .tab-block.mb25
       = simple_form_for [@category], html: { multipart: true } do |f|
         = f.error_notification
-        ul.nav.tabs-right.tabs-border
-          li.active
-            a data-toggle='tab' href='#main_uk' Основні поля
-          /- unless @category.new_record?
-            li
-              a data-toggle='tab' href='#video'   Відео
-            li
-              a data-toggle='tab' href='#gallery'   Галерея
-            li
-              a data-toggle='tab' href='#files'   Файли
-            li
-              a data-toggle='tab' href='#additional_img'   Додаткові фото
-            li
-              a data-toggle='tab' href='#frame'   Презентація
-
-          = link_to 'Повернутися', categories_path, class: 'btn btn-primary btn-tmp'
-          = f.button :submit, class: 'btn-tmp btn-success', name: 'submit', value: 'Зберегти', data: { disable_with: false }
-          /= f.button :submit, name: 'continue', value: 'Продовжити', class: 'btn-system btn-tmp', data: { disable_with: false }
-
+        hr
         .tab-content
           = render "#{controller_path}/main_uk", f: f
+        .text-right
+          = link_to 'Повернутися', categories_path, class: 'btn btn-primary btn-tmp m-3'
+          = f.button :submit, class: 'btn-tmp btn-success m-3', name: 'submit', value: 'Зберегти', data: {disable_with: false}

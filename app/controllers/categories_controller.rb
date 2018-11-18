@@ -36,7 +36,6 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    # binding.pry
     @category.destroy
     respond_to do |format|
       format.html { redirect_to action: :index, notice: 'category was successfully destroyed.' }
