@@ -1,9 +1,18 @@
+scss:
+  .panel-body {
+    position: relative;
+    padding: 15px;
+    border: 1px solid #e2e2e2;
+  }
+
 .container
   .panel-body
     .tab-block.mb25
       = simple_form_for [@category], html: { multipart: true } do |f|
         = f.error_notification
-        hr
+        ul.nav.tabs-right.tabs-border
+          li.active
+            a  data= { toggle: 'tab' } href='#main_uk' Основні поля
         .tab-content
           = render "#{controller_path}/main_uk", f: f
         .text-right
