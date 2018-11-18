@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   resources :categories
-  resources :posts, defaults: { record_type: 'Post' }, except: :show, shallow: true do
+  resources :posts, defaults: { record_type: 'Post' }, shallow: true do
     concerns :attachmentable
   end
 
