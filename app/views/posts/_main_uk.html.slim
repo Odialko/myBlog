@@ -1,4 +1,5 @@
 .tab-pane.active#main_uk
+  p Для завантаження файлів натисніть "Продовжити"
   = f.input :name, as: :string, label: 'Заголовок', input_html: { resize: false, rows: 2 }
 
   = f.association :category, collection: Category.all.pluck(:name, :id), label: 'Категорія'
