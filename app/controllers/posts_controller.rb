@@ -5,8 +5,6 @@ class PostsController < ApplicationController
     @posts = Post.order(created_at: :desc)
   end
 
-  def show
-  end
   def show; end
 
   def new
@@ -29,6 +27,9 @@ class PostsController < ApplicationController
 
   def update
     respond_to do |format|
+      if params[:continue]
+        format.html { redirect_to edit_post_path(@post), notice: 'Post was successfully updated.' }
+      end
       if @post.update(post_params)
         format.html { redirect_to posts_path, notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
