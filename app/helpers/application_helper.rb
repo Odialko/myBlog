@@ -35,6 +35,14 @@ module ApplicationHelper
       'N/A'
     end
   end
+  def file_records_box(files)
+    content_tag :div, class: 'attachemnt-title' do
+      concat content_tag(:hr)
+      concat icon('paperclip')
+      concat 'Прикріплені матеріали:'
+      concat render(files)
+    end unless files.blank?
+  end
   private
   def image?(ext)
     %w(jpeg jpg png gif).include?(ext)

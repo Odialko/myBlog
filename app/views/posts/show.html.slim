@@ -1,4 +1,6 @@
 .container
-
   h1= @post.name
   p== @post.content
+
+  = file_records_box(@post.file_records)
+

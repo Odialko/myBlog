@@ -27,6 +27,27 @@
 @import "theme";
 @import "post/show";
 
+.attachemnt-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 2;
+  div {
+    margin-bottom: 5px;
+  }
+  i {
+    margin-right: 10px;
+  }
+  span {
+    margin-right: 5px;
+  }
+  .files {
+    padding: 10px 10px;
+    border-radius: 2px;
+    background: #0275d8;
+    color: #fff;
+  }
+}
+
 #nav {
   border-radius: 0;
   margin-bottom: 0;
