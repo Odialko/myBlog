@@ -1,5 +1,13 @@
 .container
-  p#notice = notice
 
   h1= @category.name
   p== @category.description
+
+  - if @category.posts.present?
+    p
+      | Пости:
+      br
+      - @category.posts.each do |post|
+        span.post-name
+          = link_to post do
+            = post.name

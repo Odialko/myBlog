@@ -24,14 +24,11 @@ scss:
         = f.button :submit, class: 'btn-tmp btn-success m-3', name: 'submit', value: 'Зберегти', data: {disable_with: false}
         = f.button :submit, name: 'continue', value: 'Продовжити', class: 'btn-system btn-tmp', data: { disable_with: false }
 
-- unless @post.new_record?
-  javascript:
-    Dropzone.autoDiscover = false;
-    $(document).ready(function(){
-      initDropzone({
-        container:  '#files-dropzone',
-        updatePath: '#{post_file_records_path(@post.try(:id) || 1)}',
-        removePath: '#{post_file_records_path(':ID')}',
-        indexPath: '#{polymorphic_path([@post, FileRecord])}'
-      })
+javascript:
+  Dropzone.autoDiscover = false;
+  $(document).ready(function(){
+    $('#post_category_id').select2({
+      allowBlank: true,
+      multiple: false
     });
+  });
