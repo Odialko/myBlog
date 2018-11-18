@@ -25,10 +25,17 @@ scss:
         = f.button :submit, name: 'continue', value: 'Продовжити', class: 'btn-system btn-tmp', data: { disable_with: false }
 
 javascript:
-  Dropzone.autoDiscover = false;
+
   $(document).ready(function(){
+    Dropzone.autoDiscover = false;
     $('#post_category_id').select2({
       allowBlank: true,
       multiple: false
     });
+    initDropzone({
+      container:  '#files-dropzone',
+      updatePath: '#{post_file_records_path(@post.try(:id) || 1)}',
+      removePath: '#{file_record_path(':ID')}',
+      indexPath:  '#{post_file_records_path(@post.try(:id) || 1)}'
+    })
   });

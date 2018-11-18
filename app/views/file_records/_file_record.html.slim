@@ -1,0 +1,8 @@
+div
+  = link_to attachment_url(file_record), class: 'files', target: '_blank', data: { file_id: file_record.id.to_s, tooltip: "Завантажити #{attachment_source_name(file_record)}"} do
+    i.fa.fa-file-o.file-icon
+    span.file-text
+      = attachment_name_without_ext(file_record).try(:truncate, 32)
+    span.file-size
+      = attachment_size_and_extension(file_record)
+    i.fa.fa-caret-right.file-right-icon

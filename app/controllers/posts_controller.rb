@@ -18,7 +18,11 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to posts_path, notice: 'Post was successfully created.' }
+        if params[:continue]
+          format.html { redirect_to edit_post_path(@post), notice: 'Post was successfully created.' }
+        else
+          format.html { redirect_to posts_path, notice: 'Post was successfully created.' }
+        end
       else
         format.html { render :new }
       end
@@ -27,12 +31,12 @@ class PostsController < ApplicationController
 
   def update
     respond_to do |format|
-      if params[:continue]
-        format.html { redirect_to edit_post_path(@post), notice: 'Post was successfully updated.' }
-      end
       if @post.update(post_params)
-        format.html { redirect_to posts_path, notice: 'Post was successfully updated.' }
-        format.json { render :show, status: :ok, location: @post }
+        if params[:continue]
+          format.html { redirect_to edit_post_path(@post), notice: 'Post was successfully created.' }
+        else
+          format.html { redirect_to posts_path, notice: 'Post was successfully updated.' }
+        end
       else
         format.html { render :edit }
       end

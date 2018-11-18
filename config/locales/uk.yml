@@ -1,0 +1,61 @@
+ua:
+  info_messages:
+    no_data: 'Дані відсутні'
+  views:
+    pagination:
+      first: 'Перша'
+      last: 'Остання'
+      next: 'Наступна'
+      previous: 'Попередня'
+      truncate: '...'
+    home:
+      main_page: 'Головна'
+  errors:
+      messages:
+        extension_whitelist_error: 'Данний тип файлу не підходить'
+  month:
+    january: 'Січень'
+    february: 'Лютий'
+    march: 'Бререзень'
+    april: 'Квітень'
+    may: 'Травень'
+    june: 'Червень'
+    july: 'Липень'
+    august: 'Серпень'
+    september: 'Вересень'
+    october: 'Жовтень'
+    november: 'Листопад'
+    december: 'Грудень'
+  gender:
+    male: 'чоловіків'
+    female: 'жінок'
+
+#  title: 'Децентралізація дає можливості'
+#  description: 'Реформа децентралізації влади - офіційний сайт реформи. Децентралізація - це передача значних повноважень від державних органів органам місцевого самоврядування, які є найближчими до людей'
+#  keywords: "децентралізація, реформа, місцеве самоврядування, об'єднання громад, ОТГ, територіальні громади, громади, староста, Гройсман"
+#  layouts:
+#    blocks:
+#      header_logo:
+#        test: 'хуєст'
+#        bad_vision_one: 'Версія для людей'
+#        bad_vision_second: 'з вадами зору'
+#        standard: 'Стандартна версія'
+#        old_version: 'Стара версія'
+#      footer_search:
+#        press_center: 'Прес-центр ініціативи "Децентралізація влади"'
+#      show_left_menu:
+#        share: 'Поділитися'
+#  square:
+#    km: 'км'
+#  regional-consultants:
+#    title: 'Регіональні консультанти'
+#    title_new: 'Центри розвитку місцевого самоврядування'
+#  logging:
+#    update: 'оновив'
+#    create: 'створив'
+#    destroy: 'видалив'
+#    modules:
+#      Article: 'новини'
+#      Infoblock: 'інфоблоки'
+#      Community: 'громада'
+#      Area: 'область'
