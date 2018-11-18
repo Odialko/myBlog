@@ -6,17 +6,28 @@ html lang="uk"
     title myBlog
     = csrf_meta_tags
 
-    = stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'
-    = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
-    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
 
-    = javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'
+
+    = stylesheet_link_tag 'application'
     = javascript_include_tag Ckeditor.cdn_url
-    = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'
-    = javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'
-    = stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'
-    = javascript_include_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'
+
     = javascript_include_tag 'application'
+
+    = javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
+
+    - # Select2 CDN
+    = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css'
+    = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js'
+
+    - # Dropzone CDN
+    = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.1.1/min/dropzone.min.css'
+    = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.1.1/min/dropzone.min.js'
+
+    = javascript_include_tag 'https://cdn.jsdelivr.net/npm/vue'
+
+    = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js'
+    = javascript_include_tag 'https://code.jquery.com/ui/1.12.1/jquery-ui.js', :crossorigin => "anonymous", :integrity => "sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
 
   body
     = render 'common_blocks/header'

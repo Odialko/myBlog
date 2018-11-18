@@ -1,4 +1,6 @@
 .tab-pane.active#main_uk
   = f.input :name, as: :string, label: 'Заголовок', input_html: { resize: false, rows: 2 }
 
-  = f.input :content
+  = f.input :content, as: :ckeditor, label: 'Опис',
+          input_html: { ckeditor: { height: 500, language: 'uk',
+                  customConfig: asset_path('ckeditor/config.js') } }

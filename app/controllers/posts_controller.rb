@@ -53,4 +53,11 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:name, :content)
   end
+
+  def model_name
+    controller_name.classify
+  end
+  def model_constantize
+    controller_name.classify.constantize
+  end
 end
