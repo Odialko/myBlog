@@ -1,0 +1,24 @@
+.related-projects #photos-inner.related-projects-inner {
+  border-top: solid 3px #eaeaea;
+  padding-top: 35px;
+  margin-top: 23px;
+}
+.gallery_wrapp {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+}
+.project-listing {
+  .project-portfolio {
+    .post_gallery {
+      margin-bottom: 15px;
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .gallery_wrapp {
+    display: block;
+    text-align: center;
+  }
+}

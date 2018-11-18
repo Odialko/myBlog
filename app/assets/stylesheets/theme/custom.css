@@ -1,0 +1,77 @@
+.view_news .preloading-overlay,
+.view_news .preloading-progressbar,
+.view_news .preloading-progressbar-progress,
+.view_news .preloading-progressbar-label {
+    display: none;
+}
+
+.view_news.preloading {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.view_news.preloading .preloading-overlay,
+.view_news.preloading .preloading-progressbar,
+.view_news.preloading .preloading-progressbar-progress,
+.view_news.preloading .preloading-progressbar-label {
+    display: block;
+}
+
+.view_news.preloading .preloading-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: #f7f7f7;
+}
+
+.view_news.preloading .preloading-progressbar {
+    position: absolute;
+    top: 49%;
+    bottom: 49%;
+    left: 30%;
+    right: 30%;
+    background: #294984;
+}
+
+.view_news.preloading .preloading-progressbar-progress {
+    position: absolute;
+    top: 49%;
+    bottom: 49%;
+    left: 30%;
+    right: 30%;
+    width: 0;
+    margin: 2px;
+    background: #e9d758;
+}
+
+.view_news.preloading .preloading-progressbar-label {
+    position: absolute;
+    top: 52%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #294984;
+}
+
+.view_news.preloading .calendar-events-item,
+.period-events-wrap.preloading .period-events-item {
+    margin: 0 5px;
+    position: relative;
+}
+
+.view_news.preloading .calendar-events-item .overlay,
+.period-events-wrap.preloading .period-events-item .overlay {
+    z-index: auto;
+}
+
+[data-init="preloader/image"],
+.preloader-placeholder {
+    background: image-url("loading.svg") center center no-repeat;
+    background-size: 100px 100px;
+}
+
+.preloader-placeholder iframe {
+    opacity: 0;
+}

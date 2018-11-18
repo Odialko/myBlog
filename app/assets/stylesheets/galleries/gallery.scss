@@ -1,0 +1,13 @@
+.style-single img {
+  margin-bottom: 0;
+  padding: 10px;
+}
+.gallery-wrapper {
+  margin: 30px auto;
+  a {
+    img {
+      max-width: 250px;
+      margin: 5px;
+    }
+  }
+}

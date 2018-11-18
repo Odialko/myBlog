@@ -2,5 +2,5 @@
   = f.input :name, as: :string, label: 'Заголовок', input_html: { resize: false, rows: 2 }
 
   = f.input :content, as: :ckeditor, label: 'Опис',
-          input_html: { ckeditor: { height: 500, language: 'uk',
+          input_html: { ckeditor: { height: 300, language: 'uk',
                   customConfig: asset_path('ckeditor/config.js') } }
