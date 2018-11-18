@@ -13,3 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+function initButtonChoose(input_id, noFile_id) {
+    $(input_id).bind('change', function () {
+        var filename = $(input_id).val();
+        if (filename == null) {
+            // $(file_upload).removeClass('active');
+            $(noFile_id).text("Файл не обрано...");
+        }
+        else {
+            // $(file_upload).addClass('active');
+            $(noFile_id).text(filename.replace("C:\\fakepath\\", "").substr(0, 20) + '...');
+        }
+    });
+}
