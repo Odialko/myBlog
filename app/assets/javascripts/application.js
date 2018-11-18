@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require dropzone
+//= require cropper
 //= require_tree .
 
 function initButtonChoose(input_id, noFile_id) {

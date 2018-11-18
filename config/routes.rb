@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
   concern :attachmentable do
-    resources :file_records, only: %i[index create destroy]
+    resources :file_records
   end
 
   resources :categories

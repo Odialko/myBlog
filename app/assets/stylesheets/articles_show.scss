@@ -1,0 +1,56 @@
+.frame-presentation {
+  padding-top: 50px;
+  iframe {
+    width: 100%;
+  }
+}
+.section {
+  article {
+    header {
+      .next-previous:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}
+#swipebox-slider .slide img {
+  max-height: calc(100vh - 80px);
+  margin-top: 15px;
+  vertical-align: top;
+}
+#swipebox-caption {
+  display: none;
+}
+#swipebox-action {
+  #swipebox-close {
+    left: 0;
+    width: 30px;
+    background-position: 10px 12px
+  }
+}
+.gallery {
+  margin: 20px 0;
+  .swipebox {
+    display: block;
+    background-size: cover;
+    background-position: center;
+    padding: 4px;
+    margin: 0 0 20px;
+    background-color: #ffffff;
+    img {
+      width: 100%;
+    }
+  }
+}
+.load-btn {
+  cursor: pointer;
+  padding-top: 7px;
+  width: 40px;
+  font-size: 40px;
+  display: block;
+  margin: 0 auto;
+  color: white;
+}
+#swipebox-overlay {
+  background: rgba(13, 13, 13, 0.9);
+}

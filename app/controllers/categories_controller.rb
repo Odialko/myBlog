@@ -18,7 +18,11 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
-        format.html { redirect_to categories_path, notice: 'Category was successfully created.' }
+        if params[:continue]
+          format.html { redirect_to edit_category_path(@category), notice: 'Post was successfully updated.' }
+        else
+          format.html { redirect_to categories_path, notice: 'Category was successfully created.' }
+        end
       else
         format.html { render :new }
       end
@@ -28,7 +32,11 @@ class CategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @category.update(category_params)
-        format.html { redirect_to categories_path, notice: 'Category was successfully updated.' }
+        if params[:continue]
+          format.html { redirect_to edit_category_path(@category), notice: 'Post was successfully updated.' }
+        else
+          format.html { redirect_to categories_path, notice: 'Category was successfully updated.' }
+        end
       else
         format.html { render :edit }
       end
