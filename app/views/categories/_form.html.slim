@@ -5,16 +5,14 @@ scss:
     border: 1px solid #e2e2e2;
   }
 
-.container
-  .panel-body
-    .tab-block.mb25
-      = simple_form_for [@category], html: { multipart: true } do |f|
-        = f.error_notification
-        ul.nav.tabs-right.tabs-border
-          li.active
-            a  data= { toggle: 'tab' } href='#main_uk' Основні поля
-        .tab-content
-          = render "#{controller_path}/main_uk", f: f
-        .text-right
-          = link_to 'Повернутися', categories_path, class: 'btn btn-primary btn-tmp m-3'
-          = f.button :submit, class: 'btn-tmp btn-success m-3', name: 'submit', value: 'Зберегти', data: {disable_with: false}
+.panel-body
+  .tab-block.mb25
+    = simple_form_for [@category], html: { multipart: true } do |f|
+      ul.nav.tabs-right.tabs-border
+        li.active
+          a  data= { toggle: 'tab' } href='#main_uk' Основні поля
+      .tab-content
+        = render "categories/main_uk", f: f
+      .text-right
+        = link_to 'Повернутися', categories_path, class: 'btn btn-primary btn-tmp m-3'
+        = f.button :submit, class: 'btn-tmp btn-success m-3', name: 'submit', value: 'Зберегти', data: {disable_with: false}
