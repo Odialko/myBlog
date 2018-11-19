@@ -62,10 +62,10 @@ class PostsController < ApplicationController
     params.require(:post).permit(:name, :content, :category_id)
   end
 
-  def model_name
-    controller_name.classify
-  end
-  def model_constantize
-    controller_name.classify.constantize
-  end
+  # def model_name
+  #   controller_name.classify
+  # end
+  # def model_constantize
+  #   controller_name.classify.constantize
+  # end
 end
