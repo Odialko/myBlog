@@ -1,8 +1,8 @@
 class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
-
-    @comment = Comment.new(commentable: @post, content: params[:comment][:content])
+    # binding.pry
+    @comment = Comment.new(commentable: @post, content: params[:comment][:content], author: params[:comment][:author])
     if @comment.save
       render partial: "comments/comment", locals: { comment: @comment }, layout: false, status: :created
     else

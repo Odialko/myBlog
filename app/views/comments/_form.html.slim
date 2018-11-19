@@ -2,4 +2,4 @@
   = simple_form_for [@post, comment], :remote => true do |f|
     = f.input :content, :input_html => { :rows => "2" }, :label => false
     = f.input :author, :input_html => { :rows => "2" }, label: 'Ім\'я автора: '
-    = f.button :submit, :class => "btn btn-primary", :disable_with => "Submitting…"
+    = f.button :submit, :class => "btn btn-primary"
