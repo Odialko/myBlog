@@ -1,23 +1,21 @@
 class CommentsController < ApplicationController
   def create
-    @comment_hash = params[:comment]
-    @obj = @comment_hash[:commentable_type].constantize.find(@comment_hash[:commentable_id])
-    # Not implemented: check to see whether the user has permission to create a comment on this object
-    # binding.pry
-    @comment = Comment.build_from(@obj, 1, @comment_hash[:body])
+    @post = Post.find(params[:post_id])
+
+    @comment = Comment.new(commentable: @post, content: params[:comment][:content])
     if @comment.save
-      render :partial => "comments/comment", :locals => { :comment => @comment }, :layout => false, :status => :created
+      render partial: "comments/comment", locals: { comment: @comment }, layout: false, status: :created
     else
-      render :js => "alert('error saving comment');"
+      render js: "alert('Не всі поля заповнено');"
     end
   end
 
   def destroy
     @comment = Comment.find(params[:id])
     if @comment.destroy
-      render :json => @comment, :status => :ok
+      render json: @comment, status: :ok
     else
-      render :js => "alert('error deleting comment');"
+      render js: "alert('error deleting comment');"
     end
   end
 end
