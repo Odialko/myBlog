@@ -3,5 +3,5 @@ div.comment  id=("comment-#{comment.id}" )
   = link_to "×", comment_path(comment), method: :delete, remote: true, confirm: "Are you sure you want to remove this comment?", disable_with: "×", class: 'close'
   h4
     = comment.author
-    small= comment.updated_at
+    small.ml-10= format_date_time comment.created_at
   p= comment.content
