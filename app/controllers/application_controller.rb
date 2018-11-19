@@ -1,7 +1,26 @@
+require 'browser'
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_action :set_current_ip, :unic_browser_count
+
   PER_PAGE_5 = 5
+
+  def unic_browser_count
+    # binding.pry
+    @browsers = Statistic.group(:browser).count
+
+  end
+
+  private
+  def set_current_ip
+    ip_detect = Rails.env.production? ? request.remote_ip : Net::HTTP.get(URI.parse('http://checkip.amazonaws.com/')).squish
+    ip_check = Statistic.find_by(ip_address: ip_detect)
+    unless ip_check.present?
+      user = Statistic.new
+      user.update(ip_address: ip_detect, browser: browser.name)
+    end
+  end
 end

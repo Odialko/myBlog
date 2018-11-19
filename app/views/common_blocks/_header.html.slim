@@ -8,4 +8,9 @@ nav#nav.navbar.navbar-inverse
       li
         = link_to 'Категорії', categories_path
       li
-        = link_to 'Пости', posts_path, class: 'nav-link'
+        = link_to 'Пости', posts_path
+    .pull-right
+      | Переходів:
+      - @browsers.each do |browser, count|
+        span.pull-right #{browser}: #{count}
+        br
