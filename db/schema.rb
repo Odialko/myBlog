@@ -35,13 +35,16 @@ ActiveRecord::Schema.define(version: 20181119054329) do
   end
 
   create_table "comments", force: :cascade do |t|
+    t.integer "commentable_id"
+    t.string "commentable_type"
     t.string "author"
-    t.string "content"
-    t.string "annotations_type"
-    t.bigint "annotations_id"
+    t.text "content"
+    t.integer "parent_id"
+    t.integer "lft"
+    t.integer "rgt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["annotations_type", "annotations_id"], name: "index_comments_on_annotations_type_and_annotations_id"
+    t.index ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
   end
 
   create_table "file_records", force: :cascade do |t|

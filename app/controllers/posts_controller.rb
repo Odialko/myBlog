@@ -5,7 +5,10 @@ class PostsController < ApplicationController
     @posts = Post.order(created_at: :desc).page(params[:page]).per(PER_PAGE_5)
   end
 
-  def show; end
+  def show
+    @comments = @post.comments
+    @new_comment = Comment.new
+  end
 
   def new
     @post = Post.new
