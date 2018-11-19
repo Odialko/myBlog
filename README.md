@@ -14,7 +14,7 @@ rvm use
 ```
 * Setup bundler
 ```
-gem bundler install
+gem install bundler
 ```
 * Run:
 ```
