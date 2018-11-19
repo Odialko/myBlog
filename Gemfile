@@ -33,6 +33,7 @@ group :development do
 end
 
 gem 'carrierwave'
+gem 'browser'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'kaminari'
 gem 'simple_form'
