@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
   has_many :posts
-  acts_as_commentable
+  has_many :comments, as: :commentable, dependent: :destroy
 end

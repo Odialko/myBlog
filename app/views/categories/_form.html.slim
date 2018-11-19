@@ -11,8 +11,9 @@ scss:
       ul.nav.tabs-right.tabs-border
         li.active
           a  data= { toggle: 'tab' } href='#main_uk' Основні поля
+        .text-right
+          = link_to 'Повернутися', categories_path, class: 'btn btn-primary btn-tmp m-3'
+          = f.button :submit, class: 'btn-tmp btn-success m-3', name: 'submit', value: 'Зберегти', data: {disable_with: false}
       .tab-content
         = render "categories/main_uk", f: f
-      .text-right
-        = link_to 'Повернутися', categories_path, class: 'btn btn-primary btn-tmp m-3'
-        = f.button :submit, class: 'btn-tmp btn-success m-3', name: 'submit', value: 'Зберегти', data: {disable_with: false}
+

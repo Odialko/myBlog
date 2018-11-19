@@ -33,8 +33,10 @@
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v5.1.6, RVM: ruby-2.5.1 [myBlog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v5.1.6, RVM: ruby-2.5.1 [myBlog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v5.1.6, RVM: ruby-2.5.1 [myBlog]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="acts_as_commentable_with_threading (v2.0.1, RVM: ruby-2.5.1 [myBlog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v8.0.0, RVM: ruby-2.5.1 [myBlog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="autoprefixer-rails (v9.3.1, RVM: ruby-2.5.1 [myBlog]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="awesome_nested_set (v3.1.4, RVM: ruby-2.5.1 [myBlog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bindex (v0.5.0, RVM: ruby-2.5.1 [myBlog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootstrap-sass (v3.3.7, RVM: ruby-2.5.1 [myBlog]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="browser (v2.5.3, RVM: ruby-2.5.1 [myBlog]) [gem]" level="application" />

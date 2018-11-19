@@ -5,7 +5,10 @@ class CategoriesController < ApplicationController
     @categories = Category.order(created_at: :desc).page(params[:page]).per(PER_PAGE_5)
   end
 
-  def show; end
+  def show
+    @comments = @category.comments
+    @new_comment = Comment.new
+  end
 
   def new
     @category = Category.new

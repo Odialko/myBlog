@@ -5,12 +5,16 @@ Rails.application.routes.draw do
   concern :attachmentable do
     resources :file_records
   end
-  # resources :comments, :only => [:create, :destroy]
 
-  resources :categories
+  concern :comentable do
+    resources :comments, only: %i[create destroy]
+  end
+
+  resources :categories do
+    concerns :comentable
+  end
   resources :posts, defaults: { record_type: 'Post' }, shallow: true do
-    concerns :attachmentable
-    resources :comments, :only => [:create, :destroy]
+    concerns :attachmentable, :comentable
   end
 
   root 'home#index'

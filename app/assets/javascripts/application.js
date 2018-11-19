@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require dropzone
-//= require cropper
 //= require comments
 //= require_tree .
 
