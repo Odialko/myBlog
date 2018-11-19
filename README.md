@@ -30,6 +30,6 @@ rake db:migrate
 rails s
 ```
 ## Heroku link:
-[I'm an blog link](https://odialkoblog.herokuapp.com)
+[I'm an blog link](https://blogodialko.herokuapp.com/categories)
 
 # Enjoy :-)
