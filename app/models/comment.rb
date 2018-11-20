@@ -7,6 +7,6 @@ class Comment < ActiveRecord::Base
   validates :author, presence: true
 
   def titleize_attr
-    self.author = author.titleize
+    self.author = author.mb_chars.titleize
   end
 end
