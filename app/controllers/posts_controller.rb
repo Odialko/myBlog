@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: %i[show edit update destroy]
 
   def index
     @posts = Post.order(created_at: :desc).page(params[:page]).per(PER_PAGE_5)
@@ -61,11 +61,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:name, :content, :category_id)
   end
-
-  # def model_name
-  #   controller_name.classify
-  # end
-  # def model_constantize
-  #   controller_name.classify.constantize
-  # end
 end

@@ -1,5 +1,5 @@
 .comment-form
-  = simple_form_for [articles, comment], :remote => true do |f|
-    = f.input :content, :input_html => { :rows => "2" }, :label => false
-    = f.input :author, :input_html => { :rows => "2" }, label: 'Ім\'я автора: '
-    = f.button :submit, :class => "btn btn-primary"
+  = simple_form_for [articles, comment], remote: true do |f|
+    = f.input   :content, input_html: { rows: '2' }, label: false
+    = f.input   :author,  input_html: { rows: '2' }, label: 'Ім\'я автора: '
+    = f.button  :submit,  class: 'btn btn-primary'

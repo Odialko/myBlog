@@ -20,7 +20,7 @@ scss:
           = f.button :submit, class: 'btn-tmp btn-success m-3', name: 'submit', value: 'Зберегти', data: {disable_with: false}
           = f.button :submit, name: 'continue', value: 'Продовжити', class: 'btn-system btn-tmp', data: {disable_with: false}
       .tab-content
-        = render "posts/main_uk", f: f
+        = render 'posts/main_uk', f: f
         = render 'posts/files', f: f
 
 javascript:

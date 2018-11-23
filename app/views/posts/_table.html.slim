@@ -7,11 +7,11 @@
         = post.name
     td.text-right
       .btn-group.text-left
-        button.btn.btn-success.br2.btn-xs.fs12.dropdown-toggle aria-expanded="false" data-toggle="dropdown" type="button"
+        button.btn.btn-success.br2.btn-xs.fs12.dropdown-toggle aria-expanded='false' data-toggle='dropdown' type='button'
           | Дії
           span.caret.ml5
-        ul.dropdown-menu role= "menu"
+        ul.dropdown-menu role='menu'
           li
             = link_to 'Редагувати', edit_post_path(post)
           li
-            = link_to 'Видалити', post, method: :delete, data: {confirm: 'Are you sure?'}
+            = link_to 'Видалити', post, method: :delete, data: { confirm: 'Are you sure?' }
